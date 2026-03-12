@@ -2,6 +2,8 @@ package com.example.myapplication
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -10,15 +12,35 @@ import androidx.core.view.WindowInsetsCompat
 class MainActivity : AppCompatActivity() {
 
 
+    private lateinit var btnMakeSpark: Button
+    private lateinit var tvSparkResult: TextView
+    private lateinit var edtTimeOfDay: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
+        btnMakeSpark = findViewById(R.id.btnMakeSpark)
+        tvSparkResult = findViewById(R.id.tvSparkResult)
+        edtTimeOfDay= findViewById(R.id.edtTimeOfDay)
+
+
+        var timeOfDay = edtTimeOfDay.text.toString()
+
+
+        try {
+            btnMakeSpark.setOnClickListener {
 
 
 
+
+
+
+
+            }
+        } catch (e: IllegalArgumentException) {
+            println("Please enter a valid time of day")
 
 
 

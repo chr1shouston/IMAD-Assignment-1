@@ -38,13 +38,12 @@
 
     <Button
         android:id="@+id/btnMakeSpark"
-        android:layout_width="202dp"
-        android:layout_height="79dp"
+        android:layout_width="215dp"
+        android:layout_height="99dp"
         android:text="Tap to display your recommended spark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.769" />
+        app:layout_constraintVertical_bias="0.797" />
 </androidx.constraintlayout.widget.ConstraintLayout>
