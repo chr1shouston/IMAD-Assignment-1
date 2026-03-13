@@ -38,34 +38,36 @@ class MainActivity : AppCompatActivity() {
         // setOnClickListener (executes the following code upon button being pressed)
         btnMakeSpark.setOnClickListener {
 
+                    // if statements for each possible outcome
                 if (edtTimeOfDay.text.toString().lowercase() == "morning"){
+                    // Display the appropriate result to the TextView
                     tvSparkResult.text = morningSpark
                 }
 
+                else if (edtTimeOfDay.text.toString().lowercase() == "mid morning" ||
+                    edtTimeOfDay.text.toString().lowercase() == "mid-morning"){
 
-                else if (edtTimeOfDay.text.toString().lowercase() == "mid morning" || edtTimeOfDay.text.toString().lowercase() == "mid-morning"){
                     tvSparkResult.text = midMorningSpark
+
                 }
 
                 else if (edtTimeOfDay.text.toString().lowercase() == "afternoon"){
                     tvSparkResult.text = afternoonSpark
                 }
 
-                else if (edtTimeOfDay.text.toString().lowercase() == "morning"){
-                    tvSparkResult.text = morningSpark
+                else if (edtTimeOfDay.text.toString().lowercase() == "afternoon"){
+                    tvSparkResult.text = afternoonSnackTimeSpark
                 }
 
-                else if (edtTimeOfDay.text.toString().lowercase() == "morning"){
-                    tvSparkResult.text = morningSpark
+                else if (edtTimeOfDay.text.toString().lowercase() == "dinner"){
+                    tvSparkResult.text = dinnerSpark
                 }
 
-                else if (edtTimeOfDay.text.toString().lowercase() == "morning"){
-                    tvSparkResult.text = morningSpark
+                else if (edtTimeOfDay.text.toString().lowercase() == "after dinner" ||
+                    edtTimeOfDay.text.toString().lowercase() == "night"){
+                    tvSparkResult.text = nightSpark
                 }
-
-                else if (edtTimeOfDay.text.toString().lowercase() == "morning"){
-                    tvSparkResult.text = morningSpark
-                }
+                // else statement handles any other / invalid input
                 else {
                     tvSparkResult.text = "Please enter a valid time of day"
                 }
