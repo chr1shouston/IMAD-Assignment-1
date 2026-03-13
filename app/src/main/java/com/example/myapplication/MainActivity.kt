@@ -37,44 +37,33 @@ class MainActivity : AppCompatActivity() {
 
         // setOnClickListener (executes the following code upon button being pressed)
         btnMakeSpark.setOnClickListener {
-            try {
+
                 if (edtTimeOfDay.text.toString().lowercase() == "morning"){
                     tvSparkResult.text = morningSpark
                 }
-                else {
-                    tvSparkResult.text = "Please enter a valid time of day"
-                }
-                if (edtTimeOfDay.text.toString().lowercase() == "mid morning" || "mid-morning"){
+
+
+                else if (edtTimeOfDay.text.toString().lowercase() == "mid morning" || edtTimeOfDay.text.toString().lowercase() == "mid-morning"){
                     tvSparkResult.text = midMorningSpark
                 }
-                else {
-                    tvSparkResult.text = "Please enter a valid time of day"
+
+                else if (edtTimeOfDay.text.toString().lowercase() == "afternoon"){
+                    tvSparkResult.text = afternoonSpark
                 }
-                if (edtTimeOfDay.text.toString().lowercase() == "morning"){
+
+                else if (edtTimeOfDay.text.toString().lowercase() == "morning"){
                     tvSparkResult.text = morningSpark
                 }
-                else {
-                    tvSparkResult.text = "Please enter a valid time of day"
-                }
-                if (edtTimeOfDay.text.toString().lowercase() == "morning"){
+
+                else if (edtTimeOfDay.text.toString().lowercase() == "morning"){
                     tvSparkResult.text = morningSpark
                 }
-                else {
-                    tvSparkResult.text = "Please enter a valid time of day"
-                }
-                if (edtTimeOfDay.text.toString().lowercase() == "morning"){
+
+                else if (edtTimeOfDay.text.toString().lowercase() == "morning"){
                     tvSparkResult.text = morningSpark
                 }
-                else {
-                    tvSparkResult.text = "Please enter a valid time of day"
-                }
-                if (edtTimeOfDay.text.toString().lowercase() == "morning"){
-                    tvSparkResult.text = morningSpark
-                }
-                else {
-                    tvSparkResult.text = "Please enter a valid time of day"
-                }
-                if (edtTimeOfDay.text.toString().lowercase() == "morning"){
+
+                else if (edtTimeOfDay.text.toString().lowercase() == "morning"){
                     tvSparkResult.text = morningSpark
                 }
                 else {
@@ -82,9 +71,6 @@ class MainActivity : AppCompatActivity() {
                 }
 
 
-            } catch {
-
-            }
 
             ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
                 val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
