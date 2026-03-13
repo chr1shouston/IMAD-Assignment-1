@@ -26,24 +26,11 @@ class MainActivity : AppCompatActivity() {
         edtTimeOfDay = findViewById(R.id.edtTimeOfDay)
 
 
-
-
-
-        try {
             btnMakeSpark.setOnClickListener {
                 when (edtTimeOfDay.text.toString()) {
                     "Morning" -> tvSparkResult.text = "morning spark"
                 else -> tvSparkResult.text = "please enter something else"}
             }
-        } catch (e: IllegalArgumentException) {
-            println("Please enter a valid time of day")
-
-
-
-
-
-
-
 
 
             ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -53,4 +40,3 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-}
