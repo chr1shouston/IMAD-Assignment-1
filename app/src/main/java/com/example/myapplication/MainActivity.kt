@@ -23,21 +23,17 @@ class MainActivity : AppCompatActivity() {
 
         btnMakeSpark = findViewById(R.id.btnMakeSpark)
         tvSparkResult = findViewById(R.id.tvSparkResult)
-        edtTimeOfDay= findViewById(R.id.edtTimeOfDay)
+        edtTimeOfDay = findViewById(R.id.edtTimeOfDay)
 
 
-        var timeOfDay = edtTimeOfDay.text.toString()
+
 
 
         try {
             btnMakeSpark.setOnClickListener {
-
-
-
-
-
-
-
+                when (edtTimeOfDay.text.toString()) {
+                    "Morning" -> tvSparkResult.text = "morning spark"
+                else -> tvSparkResult.text = "please enter something else"}
             }
         } catch (e: IllegalArgumentException) {
             println("Please enter a valid time of day")
@@ -50,10 +46,11 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+            ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+                val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+                v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+                insets
+            }
         }
     }
 }
