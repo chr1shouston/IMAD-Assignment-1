@@ -130,3 +130,9 @@ Ensures the app builds correctly
 Helps catch errors early
 
 Improves overall code quality
+
+
+
+
+YouTube video explaining how it works:
+https://youtu.be/f6kRHnfElD0
